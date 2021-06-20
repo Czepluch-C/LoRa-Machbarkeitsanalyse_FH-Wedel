@@ -1,0 +1,28 @@
+1. navigate to folder in Terminal
+
+
+2. compile Receiver
+    make
+
+
+3.  if tmux is installed:
+    
+    tmux
+
+    python3 gateway.py
+
+    ctrl + b, then "$" rename session to "gateway" press enter
+    ctrl + b, "d" to detech from first session
+
+    tmux
+    
+    python3 main.py
+
+    ctrl + b, then "$" rename session to "main" press enter
+    ctrl + b, "d" to detech from second session
+
+    join session by 
+        tmux a
+
+    switch session by 
+        ctrl + b, "(" or ")"

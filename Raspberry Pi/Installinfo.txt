@@ -1,0 +1,109 @@
+1. Install addiontional Python Librarys
+
+        Py Cryptodome
+    pip3 install pycryptodome
+
+
+        Paho-MQTT
+    pip3 install paho-mqtt
+
+
+        pyowm
+    pip3 install pyowm
+
+
+        InfluxDB
+    pip install influxdb
+
+
+
+2. optional installation for virtual consoles TMUX
+
+    sudo apt-get install tmux
+
+
+
+3. follow first steps of Dragino Raspberry Pi manual
+    https://www.dragino.com/downloads/downloads/LoRa-GPS-HAT/LoRa_GPS_HAT_UserManual_v1.0.pdf
+
+    download Git Repository of LoRa Hat
+    https://github.com/dragino/dual_chan_pkt_fwd
+
+    copy the "include/rapidjson" folder in this folder
+    
+
+
+4. compile C Code
+
+    make
+
+
+
+5. install MQTT broker for Raspberry Pi
+
+    sudo apt-get install -y mosquitto mosquitto-clients
+    
+    sudo systemctl enable mosquitto.service
+
+
+
+6. install influxDB Server
+
+    wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+
+    echo "deb https://repos.influxdata.com/debian buster stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+    
+    sudo apt update
+    
+    sudo apt install influxdb
+
+    sudo systemctl unmask influxdb
+
+    sudo systemctl enable influxdb
+
+
+
+7. setup InfluxDB
+    enter in cmd: 
+        influx
+    
+    in influx cmd:
+        CREATE USER admin WITH PASSWORD 'LoRa' WITH ALL PRIVILEGES
+
+        exit
+
+    cmd: 
+        sudo nano /etc/influxdb/influxdb.conf
+
+            set the following values
+                auth-enabled = true
+                pprof-enabled = true
+                pprof-auth-enabled = true
+                ping-auth-enabled = true
+            
+            save
+
+
+
+8. setup Grafana
+
+    wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+
+    echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+
+    sudo apt-get update
+
+    sudo apt-get install -y grafana
+
+    sudo /bin/systemctl enable grafana-server
+
+    sudo /bin/systemctl start grafana-server
+
+
+
+9. get OpenWeatherMap key
+    get an API key and enter it into the settings.json file
+
+
+
+10 setup influxDB Tables and enter the name to the settings.json

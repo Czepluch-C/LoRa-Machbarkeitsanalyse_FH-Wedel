@@ -1,0 +1,89 @@
+{
+    "AES-Key": [
+        142,
+        194,
+        164,
+        255,
+        161,
+        160,
+        178,
+        156,
+        20,
+        236,
+        200,
+        109,
+        60,
+        5,
+        82,
+        54
+    ],
+    "AES-Key2": [
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48
+    ],
+    "MQTT_IP": "localhost",
+    "MQTT_Port": 1883,
+    "IgnoreTime": 10,
+    "Influx": {
+        "IP": "localhost",
+        "Port": 8086,
+        "username": "pi",
+        "pw": "pi",
+        "DB": "TestDB",
+        "measurementTable": "testLuftqualitaet",
+        "metaTable": "testMeta"
+    },
+    "ExternalWeather": {
+        "API-Key": "",
+        "Location": "Wedel,DE",
+        "WeatherTable": "Wetter",
+        "enable": true
+    },
+    "Protocol": {
+        "1": {
+            "Sender": {
+                "1": {
+                    "verificationID": 2134,
+                    "name": "HS1",
+                    "interval": 125,
+                    "lastMessage": {
+                        "time": 1620926100.3990731,
+                        "counter": 66
+                    }
+                },
+                "2": {
+                    "verificationID": 2134,
+                    "name": "HS2",
+                    "interval": 125,
+                    "lastMessage": {
+                        "time": 1620926349.718451,
+                        "counter": 66
+                    }
+                },
+                "3": {
+                    "verificationID": 2134,
+                    "name": "HS3",
+                    "interval": 125,
+                    "lastMessage": {
+                        "time": 1618146382133,
+                        "counter": 10
+                    }
+                }
+            }
+        }
+    }
+}

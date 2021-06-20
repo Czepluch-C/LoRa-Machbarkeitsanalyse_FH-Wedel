@@ -1,0 +1,9 @@
+use Arduino IDE
+
+follow installation guide of Heltec: https://heltec-automation-docs.readthedocs.io/en/latest/esp32/quick_start.html
+
+
+install ESP32 LoRaWAN library from Heltec: https://github.com/HelTecAutomation/ESP32_LoRaWAN 
+install DHT11 library: https://github.com/adafruit/DHT-sensor-library
+install SGP30 library: https://github.com/adafruit/Adafruit_SGP30
+install AES library: https://www.arduino.cc/reference/en/libraries/aeslib/

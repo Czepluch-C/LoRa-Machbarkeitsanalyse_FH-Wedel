@@ -1,0 +1,5 @@
+For using the ESP32 code you can configure some of the values so they fit best for you
+
+The program Node is used for the real application
+
+The program testSpreadingFactor is for testing of different SpreadingFactors
