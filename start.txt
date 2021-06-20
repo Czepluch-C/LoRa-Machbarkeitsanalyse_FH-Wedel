@@ -26,3 +26,9 @@
 
     switch session by 
         ctrl + b, "(" or ")"
+        
+        
+3. without tmux
+    python3 gateway.py
+    
+    on seperate cmd:    python3 main.py
